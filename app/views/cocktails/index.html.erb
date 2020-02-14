@@ -1,7 +1,10 @@
-<div class="container">
-  <h1>Cocktail recipes</h1>
-  <% @cocktails.each do |cocktail| %>
-    <div><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
-  <% end %>
-  <%= link_to "Create a new Cocktail", new_cocktail_path %>
-</div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/613037/pexels-photo-613037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); padding: 100vh 0;">
+  <div class="container">
+    <h1>Cocktail recipes</h1>
+    <ul class="cocktails-list">
+      <% @cocktails.each do |cocktail| %>
+        <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+      <% end %>
+    </ul>
+    <%= link_to "Create a new Cocktail", new_cocktail_path, class: "btn btn-ghost" %>
+  </div>
